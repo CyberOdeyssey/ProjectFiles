@@ -19,3 +19,18 @@ One recommended best practice when writing commit messages is to use a template 
 - use the command: `git config --global commit.message` `[file location]` 
 This command ensures that anytime you run `git commit` you use the template. 
  
+ ## How Repo conflicts and mismatch are avoided
+
+ Here’s the **safety interplay** in one tight summary:
+
+* **Shared history check** → Prevents you from accidentally pushing an unrelated local project to a remote repo.
+
+  * If no common commit ancestry, push is rejected unless you `--force`.
+
+* **Existing `.git` check** → Prevents you from accidentally overwriting an existing local repo when cloning.
+
+  * If `.git` already exists, clone is blocked unless you remove `.git` or clone elsewhere.
+
+**In short:**
+Git blocks strangers from merging unless you explicitly bypass the warning.
+One guard protects the **remote**, the other protects the **local**.
