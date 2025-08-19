@@ -34,3 +34,24 @@ This command ensures that anytime you run `git commit` you use the template.
 **In short:**
 Git blocks strangers from merging unless you explicitly bypass the warning.
 One guard protects the **remote**, the other protects the **local**.
+
+## git remote
+It links your local repo to a remote repo and gives it the short name origin.
+
+So instead of typing the full URL every time, you can just use:
+
+```
+git push origin main
+git pull origin dev
+```
+In short: it sets up a convenient nickname/alias (origin) for the remote repo URL
+
+## copying moving and renaming a git files and folders
+
+* **File rename/move** → old commits show old path, new commits show new path; history continues.
+* **File copy** → new file starts fresh history from copy commit.
+
+* **Folder rename/move** → all contained files switch paths in new commit; history continues.
+* **Folder copy** → new folder + files start fresh history from copy commit.
+
+
