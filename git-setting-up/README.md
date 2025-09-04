@@ -13,16 +13,14 @@ This project contains foundational knowledge required for git mastery.
 __step 1__
 
 Create the project folder. You can do this from VS code or from windows explorer.
-![image]()
 
 To initialize a folder as a git repo
 Navigate to the directory you want git to track, in this case the "git-foundations" directory.
-![image]()
 
  use the command:
 `git init` 
 
-![image]()
+![image](./img/git%20init.png)
 This folder is now being tracked by git
 
 __step 2__
@@ -45,7 +43,6 @@ using:
 __step 5__
 
 Created a remote repository on gituhub
-![Image]()
 
 __step 6__
 
@@ -63,16 +60,19 @@ Push your changes to github
 __Project completed__
 
 ## Challenges Faced and Solutions
-I accidentally made the wrong folder a repository
+I accidentally made the wrong folder a repository.
+
+![git-init-mistake](./img/git%20init%20mistake.png)
+
 I was supposed to make the ProjectFiles the parent repo
-However, I ran `git init` in the child folder. 
+However, I ran `git init` in the child folder (git-foundations). 
 
 To resolve this
-- I removed the .git files to stop it from being a git repo
+- I removed the .git files in the child directory to stop it from being a git repo
 - make the parent directory the git repo 
 - added the child folder to the parent repo so that they can be tracked
 
-
+![image](./img/git%20init%20mistake%20solution.png)
 
 ## Command Summary
 ``` 
