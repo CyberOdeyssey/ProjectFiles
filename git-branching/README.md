@@ -21,6 +21,7 @@ NOTE: The  `git checkout -b [branch-name]` command is equivalent to running the 
 ![image](./img/create-new-branch.jpg)
 
 __step 2__
+
 ![image](./img/new-file-commit.jpg)
 
 Add a file named file.txt and commit the change 
