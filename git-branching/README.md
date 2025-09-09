@@ -22,6 +22,7 @@ NOTE: The  `git checkout -b [branch-name]` command is equivalent to running the 
 
 __step 2__
 ![image](./img/new-file-commit.jpg)
+
 Add a file named file.txt and commit the change 
 
 __step 3__ 
@@ -34,6 +35,7 @@ __step 4__
 To merge the feature branch into the main branch
 First switch to the main branch 
 Run the command `git merge [branch-name]`
+
 ![image](./img/merging-with-main.jpg)
 
  
@@ -50,9 +52,11 @@ __NOTE:__
 __step 5__ 
 
 Create a new conflict branch
+
 ![create conflict branch](./img/conflict-branch.jpg)
 
 switch to new branch to change what is in file.txt
+
 ![switch branch](./img/git-switch.jpg)
 
 
