@@ -122,3 +122,29 @@ If the commits match, your edits ride along safely.
 
 __Proof of the fruit__
 ![image](./img/expected-conflict-behaviour.png)
+
+## Command Summary
+
+__Creating branch__
+`git branch [branch name] [commit hash/revision]`
+
+create and switch `git checkout -b [branch name]` 
+
+Switching branches
+
+`git checkout [branch name]`
+
+`git switch [branch name]` -- newer command
+
+Renaming branch
+`git branch -m [new-name]` --> change HEAD branch
+
+`git branch -m [new-name] [old-name]`
+
+__Deleting a branch__
+
+>NOTE: You cannot delete HEAD branch 
+>
+`git branch -d [branch-name]`
+
+`git push origin --delete [branch-name]` ---> delete a remote branch
