@@ -1,44 +1,73 @@
-# Git Interactive Rebase
+# __Git Interactive Rebase__
 
-## Project Tasks
-__Interactive Rebase (Squash)__
-1. On main, make 3 commits:
-    - Create blog.txt → First blog post.
-    - Append Fix typo in blog post.
-    - Append Updated blog post formatting.
+# __Project Tasks__
 
-2. Run an interactive rebase over the last 3 commits: `git rebase -i HEAD~3`
+
+_Interactive Rebase (Squash)_
+---
+1. Creat a branch with the name `feat/rebase` 
+
+    - Create a file blog.txt with the commit message: 
+        
+        "A: First blog post" 
+
+    - Add text to the file and commit with message:
     
-3. Squash the typo and formatting commits into the first one.
-    - Final message → Add first blog post with formatting.
+        "B: Append Fitx typo in blog post" 
 
-__Interactive Rebase (Reword & Reorder)__
+    - Add more text to the file and commit with the message: 
+    
+        "C: Append Updated blog post formatting"
 
-1. On main, make 3 commits in this order:
-    - Create contact.txt → Contact info.
-    - Create about.txt → About page.
-    - Create services.txt → Services list.
-2. Run interactive rebase:
+2. Run an interactive rebase over the last 3 commits: 
+ use the command `git rebase -i HEAD~3`
+    
+3. Squash the commits starting with "B:. . ." and "C:. . ."  with the commit "A: First blog post."
+
+    - For the suqashed commit, use the commit message  
+        
+        "D: Add first blog post with formatting"
+
+_Interactive Rebase (Reword & Reorder)_
+---
+
+1. On the feat/rebase branch, add information to the blog.txt file and make 3 commits with commit message in this order:
+    -  "A: Add Contact info"
+    -  "B: Add About page"
+    -  "C: Add Service list"
+
+2. Enter interactive rebase mode using command:
 `git rebase -i HEAD~3`
 
-3. Reorder commits so that about.txt is committed first.
+3. Reorder commits so that they are in the below order:
+     
+     - "C: Add Service list"
+     - "A: Add Contact info"
+     - "B: Add About page"
 
-4. Reword the message Create services.txt → Add services section.
+4. Reword the lastest commit with message:
+    - "C: Add Service list section (reword)"
 
-__Split a Commit (Advanced Interactive Rebase)__
 
-1. On main, make a single commit that adds two files at once:
-    - team.txt → contains Team member list.
-    - roles.txt → contains Team roles and duties.
-2. Run interactive rebase:
-`git rebase -i HEAD~1`
+_Split a Commit (Advanced Interactive Rebase)_
+---
+1. On feat/rebase branch, create two files:
 
-3. Mark the commit as edit.
-    
-4. Use:
-`git reset HEAD^` (what does this `^` symbol in the command even mean?)
-    - Commit team.txt separately with message Add team member list.
-    - Commit roles.txt separately with message Add team roles.
-    
-5. Continue the rebase so history has two neat commits instead of one.
+    - roles.txt 
+    - team.txt
 
+    Commit both files with commit message: "Add team information"
+
+2. Split both commits into two separate commits using interactive rebase.
+
+    Each file should be commited with commit message as shown below:
+
+    | file name  | commit message  |
+    | ---        | ---             |
+    | team.txt | Add team members         |
+    | role.txt | Define team member roles |
+
+
+3. Continue the rebase so history has two neat commits instead of one.
+
+---
